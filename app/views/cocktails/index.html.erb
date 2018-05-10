@@ -1,0 +1,33 @@
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('/images/BackAlley Cocktails, CeSuo Style.jpg');">
+  <div class="banner-content">
+    <h1>Back Alley Cocktails</h1>
+    <p>- Fiery, Passionate, Fun - </p>
+    <p>With all the charm of a Sichuan Cesuo</p>
+    <a class="btn btn-warning btn-lg">Into the Heart of Darkness</a>
+  </div>
+</div>
+
+
+
+
+<h1>The Barnyard Menu</h1>
+<div class="container">
+        <div class="row">
+            <% @cocktails.each do |cocktail| %>
+                 <%= link_to cocktail_path(cocktail) do %>
+                <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+                  
+                        <h2><%= cocktail.name %></h2>
+                        <p>Let's get mixing.
+                        <%= link_to cocktail.name, cocktail_path(cocktail) %></p>
+                    <img class="card-user" src="/Users/brothersky/code/WingbrotherSky/rails-mister-cocktail/app/assets/images/For Energy!.jpg">
+             </div>
+            <% end %>
+        <% end %>
+    </div>
+</div>
+
+<%= link_to "Add Cocktail", new_cocktail_path %> #replace this with the link from the component.
+# go to Pexels and look for cocktails.
+#replace Kitt placeholder with the image.
+#then put the cards insdie of the loop.
