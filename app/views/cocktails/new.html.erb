@@ -4,9 +4,10 @@
         <div class="col col-xs-12 col-sm-6 col-sm-offset-3">
             <h3>Add a cocktail!</h3>
                 <%= simple_form_for(@cocktail) do |f| %>
-                    <%= f.input :name, label: "Insert your poison of choice:", label_html: { class: "drink-text" } %>
-                    <%= f.button :submit %>
+                    <%= f.input :name, label: "Name your drink and hit the Mixing Trough", label_html: { class: "drink-text" } %>
+                    <%= f.button :submit, class: "btn btn-info btn-md" %>
                  <% end %>
+                 <p><%= link_to "-Back.-", cocktails_path %></p>
            
         </div>
     </div>

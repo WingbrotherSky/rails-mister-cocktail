@@ -12,21 +12,21 @@
 
 <h1>The Barnyard Menu</h1>
 <div class="container">
-        <div class="row">
-            <% @cocktails.each do |cocktail| %>
-                 <%= link_to cocktail_path(cocktail) do %>
-                <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-                  
+    <div class="row">
+        <% @cocktails.each do |cocktail| %>
+            <div class="col col-xs-12 col-sm-4 ">
+                <%= link_to cocktail_path(cocktail) do %>
+                    <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= asset_path "#{rand(6)}.jpeg" %>');background-size: cover;">
                         <h2><%= cocktail.name %></h2>
-                        <p>Let's get mixing.
-
-                    <img class="card-user" style="url('<%= asset_path 'productivity.jpg' %>');">
-             </div>
-            <% end %>
+                        <p>Let's get mixing.</p>
+                        <img class="card-user" style="url('<%= asset_path 'productivity.jpg' %>');">
+                    </div>
+                <% end %>
+            </div>
         <% end %>
     </div>
 </div>
 
 <div class="add_cocktail_button">
-<%= link_to "Add Cocktail", new_cocktail_path, class:"btn btn-warning btn-lg" %>
+<%= link_to "Add Cocktail", new_cocktail_path, class:"btn btn-danger btn-lg" %>
 </div>
