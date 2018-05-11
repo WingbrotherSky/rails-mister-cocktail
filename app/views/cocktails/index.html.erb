@@ -1,9 +1,9 @@
-<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('/images/BackAlley Cocktails, CeSuo Style.jpg');">
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= asset_path 'banner-bg.jpg' %>');">
   <div class="banner-content">
     <h1>Back Alley Cocktails</h1>
     <p>- Fiery, Passionate, Fun - </p>
     <p>With all the charm of a Sichuan Cesuo</p>
-    <a class="btn btn-warning btn-lg">Into the Heart of Darkness</a>
+    <%= link_to "Into the Heart of Darkness", new_cocktail_path, class:"btn btn-warning btn-lg" %>
   </div>
 </div>
 
@@ -19,15 +19,14 @@
                   
                         <h2><%= cocktail.name %></h2>
                         <p>Let's get mixing.
-                        <%= link_to cocktail.name, cocktail_path(cocktail) %></p>
-                    <img class="card-user" src="/Users/brothersky/code/WingbrotherSky/rails-mister-cocktail/app/assets/images/For Energy!.jpg">
+
+                    <img class="card-user" style="url('<%= asset_path 'productivity.jpg' %>');">
              </div>
             <% end %>
         <% end %>
     </div>
 </div>
 
-<%= link_to "Add Cocktail", new_cocktail_path %> #replace this with the link from the component.
-# go to Pexels and look for cocktails.
-#replace Kitt placeholder with the image.
-#then put the cards insdie of the loop.
+<div class="add_cocktail_button">
+<%= link_to "Add Cocktail", new_cocktail_path, class:"btn btn-warning btn-lg" %>
+</div>

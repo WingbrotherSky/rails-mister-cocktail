@@ -7,7 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 #save url. Find key. Find value. This is drinks key with an array value.
-
+Dose.delete_all
+Cocktail.delete_all
+Ingredient.delete_all
 
 require 'open-uri'
 require 'json'
@@ -21,12 +23,12 @@ end
 puts "Created #{Ingredient.count} ingredients."
     
 
-# Ingredient.create(name: "lemon")
-# Ingredient.create(name: "ice")
-# Ingredient.create(name: "mint leaves")
-# Ingredient.create(name: "milk")
-# Ingredient.create(name: "garlic")
-# Ingredient.create(name: "hot sauce")
-# Ingredient.create(name: "vermouth")
-# Ingredient.create(name: "sours")
-# Ingredient.create(name: "hua jiao")
+Ingredient.create(name: "HuaJiao")
+Ingredient.create(name: "Chili Peppers")
+Ingredient.create(name: "Milk")
+Ingredient.create(name: "Fire")
+Ingredient.create(name: "Tree Bark")
+Ingredient.create(name: "Vermouth")
+Ingredient.create(name: "Cardboard")
+Ingredient.create(name: "Old Socks")
+Ingredient.create(name: "Rainbow Dash")

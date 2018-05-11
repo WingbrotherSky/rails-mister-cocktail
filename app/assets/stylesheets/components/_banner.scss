@@ -1,5 +1,5 @@
 .banner {
-    color: white;
+    color: whitesmoke;
     text-align: center;
     height: 100vh;
     /* if you have a 70px navbar => height: calc(100vh - 70px); */
@@ -7,11 +7,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-attachment: fixed;
+    
   }
   .banner h1 {
-    font-size: 50px;
+    font-size: 60px;
     font-weight: bold;
-    text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.3);
+    &:hover {
+        color:black;
+        text-shadow: 5px;
+    }
   }
   .banner p {
     font-size: 25px;
@@ -19,4 +25,8 @@
     color: rgb(255, 255, 255);
     opacity: 0.6;
     margin-bottom: 30px;
+    &:hover {
+        color:black;
+        text-shadow: 5px;
+    }
   }
